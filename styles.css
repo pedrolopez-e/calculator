@@ -4,14 +4,14 @@ body {
 }
 
 .calculator {
-    height: 300px;
+    height: 150px;
     width: 200px;
     background-color: rgb(190, 187, 187);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .screen {
@@ -19,15 +19,15 @@ body {
     width: 180px;
     background-color: rgb(63, 228, 159);
     margin-top: 20px;
-}
-
-.number {
-
+    border-radius: 5px;
 }
 
 .keyboard {
-    height:200px;
     width: 150px;
-    background-color: beige;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
 }
 
