@@ -18,16 +18,17 @@ body {
     height: 30px;
     width: 180px;
     background-color: rgb(63, 228, 159);
-    margin-top: 20px;
+    margin-top: 15px;
     border-radius: 5px;
+    text-align: right;
 }
 
 .keyboard {
     width: 150px;
-    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
     justify-content: center;
+    margin-bottom: 7px;
 }
 
