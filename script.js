@@ -22,6 +22,7 @@ let value1;
 let value2;
 let result;
 let operation;
+let bothValuesSelected = false;
 const numbers = document.querySelectorAll(".number");
 const screen = document.querySelector(".screen");
 const clear = document.querySelector(".clear")
@@ -37,18 +38,27 @@ numbers.forEach((number) => {
             screen.textContent += event.target.textContent;
             value2 = Number(screen.textContent);
             result = operate(value1, value2, operation);
+            result = Math.round(result * 10) / 10;
+            value1 = result;
+            bothValuesSelected = true;
         }        
     });
 });
 
 clear.addEventListener('click', function(event) {
     screen.textContent = "";
+    value1 = undefined;
+    value2 = undefined;
+    operation = undefined;
 });
 
 equal.addEventListener('click', function(event) {
-    if (result != undefined) {
+    if (result != undefined && bool === true) {
         screen.textContent = result;
-        operation = undefined;
+        value1 = result;
+        bothValuesSelected = false;
+    } else {
+        screen.textContent = "Error: no operation selected";
     }
 })
 
